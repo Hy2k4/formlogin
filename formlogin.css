@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+lấy font montserrat website
+https://fonts.google.com/
+*/
+
+body{
+    /*su dung font web*/
+    font-family: "Montserrat", sans-serif;
+}
+
+form{
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+input{
+    height: 50px;
+    width: 300px;
+    outline: none;
+    border: 1px solid #dadce0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: inherit;
+    color: #202124;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+label{
+    font-size: 20px;
+    position: absolute;
+    padding: 0px 5px;
+    left: 5px;
+    top: 50%;
+    /*pointer-events: none này dùng để khi t chọn ô text của tk và mk ko chọn dính tên đã đặt*/
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus{
+    border: 2px solid #1a73e8;
+}
+
+/*event khi có dữ liệu nhập vào ô thì sẽ giữ nguyên label đặt cho*/
+.form-group input:focus + label, .form-group input:valid + label{
+    top: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+input#btn_login{
+    background: #1a73e8;
+    color: #fff;
+}
+
+/*khi di chuột vào button sẽ mờ đi*/
+input#btn_login:hover{
+    opacity: 0.8;
+}
+
+.login-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-links li {
+    display: inline-block;
+    padding: 20px;
+    padding-left: 40px;
+}
